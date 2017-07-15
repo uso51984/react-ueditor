@@ -1,7 +1,8 @@
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var BUILD_PATH = path.resolve(__dirname, './dist');
+
+var BUILD_PATH = path.resolve(__dirname, './');
 var TMP_PATH = path.resolve(__dirname,'./templates/index.html');
 
 module.exports = {
@@ -26,7 +27,7 @@ module.exports = {
     }),
     new webpack.DefinePlugin({
       "process.env": {
-        NODE_ENV: JSON.stringify("development") // development,production
+        NODE_ENV: JSON.stringify("production") // development,production
       }
     })
   ],
