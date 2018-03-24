@@ -39,7 +39,17 @@ module.exports = {
     },{
         test: /\.less$/,
         loaders: ['style', 'css?sourceMap', 'less?&sourceMap&includePaths[]=./user-center/style/index.less']
-    }
+      },
+      { test: /\.css$/, loader: "style-loader!css-loader" }
+      ,
+      {
+        test: /\.(png|jpg|gif)$/,
+        loader: 'file-loader?name=images/[name].[ext]',
+      },
+      {
+        test: /\.(eot|ttf|svg|woff|woff2)$/,
+        loader: 'file-loader?name=fonts/[name].[ext]',
+      },
     ]
   }
 };
