@@ -38,6 +38,36 @@ export default Demo;
 | className | 添加自定义class | String | '' |
 | prefix | 修改默认class前缀 | String | 'bee' |
 
+### editorConfig 例子
+```
+// ueditor 默认值
+const editorConfig = {
+  toolbars: [
+    [
+      'bold',
+      'italic',
+      'underline',
+      'strikethrough',
+      'forecolor',
+      'backcolor',
+      'justifyleft',
+      'justifycenter',
+      'justifyright',
+      '|',
+      'insertunorderedlist',
+      'insertorderedlist',
+      'blockquote',
+    ],
+  ],
+  autoClearinitialContent: false,
+  autoFloatEnabled: true,
+  focus: false,
+  initialFrameWidth: 740, // 初始化编辑器宽度
+  initialFrameHeight: 300,
+  maximumWords: 100000,
+};
+```
+
 
 ## ueditor完整配置项
 > 以下是ueditor 代码默认的配置代码。 editorConfig配置实则是调用了`new UE.ui.Editor(conf);`
