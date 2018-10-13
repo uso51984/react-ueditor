@@ -2,6 +2,7 @@
 ```
 npm i --save rc-ueditor
 ```
+[demo](http://uso.oschina.io/react-ueditor-demo/)
 ### 使用
 ```
 import RcUeditor from 'rc-ueditor';
@@ -25,19 +26,6 @@ class Demo extends React.Component {
 export default Demo;
 ```
 ### api
-
-  static defaultProps = {
-    value: '',
-    onChange: () => { },
-    ueditorUrl: 'https://uso.oschina.io/react-ueditor-demo/ueditor.all.js',
-    ueditorConfigUrl: 'https://uso.oschina.io/react-ueditor-demo/ueditor.config.js',
-    ueditorHomeUrl: '',
-    ueditorIframeUrl: '',
-    editorConfig: {}, // ueditor 默认值
-    className: '',
-    prefix: 'bee',
-  }
-
 
 | 成员 | 说明 | 类型 | 默认值 |
 | --- | --- | --- | --- |
