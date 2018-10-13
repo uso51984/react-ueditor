@@ -2,7 +2,6 @@
   "name": "rc-ueditor",
   "version": "1.0.1",
   "description": "react ueditor",
-  "repository": "https://github.com/uso51984/react-ueditor",
   "main": "lib/index.js",
   "dependencies": {
     "react": "^15.6.1",
@@ -35,5 +34,5 @@
     "start": "webpack-dev-server --devtool eval --progress --hot --host 0.0.0.0 --port 9292 --config webpack.dev.config.js",
     "build": "babel src --out-dir lib"
   },
-  "author": "edmund chen"
+  "author": "edmund_chen"
 }
