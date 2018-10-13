@@ -1,13 +1,14 @@
 var webpack = require('webpack');
 var path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+
 var BUILD_PATH = path.resolve(__dirname, './dist');
-var TMP_PATH = path.resolve(__dirname,'./templates/index.html');
+var TMP_PATH = path.resolve(__dirname,'./examples/index.html');
 
 module.exports = {
   entry: {
     'app': [
-      './src/app.js',
+      './examples/app.js',
     ],
     vendor: ['react', 'react-dom']
   },
