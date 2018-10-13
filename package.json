@@ -1,6 +1,6 @@
 {
   "name": "rc-ueditor",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "react ueditor",
   "repository": "https://github.com/uso51984/react-ueditor",
   "main": "lib/index.js",
