@@ -38,6 +38,8 @@ export default Demo;
 | className | 添加自定义class | String | '' |
 | prefix | 修改默认class前缀 | String | 'bee' |
 
+> 注意： 实际生产环境使用请修改ueditorUrl以及ueditorConfigUrl到自己的服务器地址或者CDN。以及在对应的目录放入ueditor的依赖文件，这点可以参考ueditor官方给出的example. 自行下载观看https://ueditor.baidu.com/website/download.html
+
 ### editorConfig 例子
 ```
 // ueditor 默认值
