@@ -1,6 +1,6 @@
 {
-  "name": "rc-ueditor",
-  "version": "1.0.1",
+  "name": "react-ueditor-wrap",
+  "version": "1.0.0",
   "description": "react ueditor",
   "main": "lib/index.js",
   "dependencies": {

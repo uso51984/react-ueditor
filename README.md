@@ -1,11 +1,11 @@
 ### 安装
 ```
-npm i --save rc-ueditor
+npm i --save rc-ueditor-wrap
 ```
 [demo](http://uso.oschina.io/react-ueditor-demo/)
 ### 使用
 ```
-import RcUeditor from 'rc-ueditor';
+import RcUeditor from 'rc-ueditor-wrap';
 
 class Demo extends React.Component {
 
