@@ -3,6 +3,17 @@
   "version": "1.0.0",
   "description": "react ueditor",
   "main": "lib/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uso51984/react-ueditor"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ueditor",
+    "react-ueditor",
+    "rc-ueditor",
+    "richtext"
+  ],
   "dependencies": {
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
