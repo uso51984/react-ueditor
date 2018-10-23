@@ -1,6 +1,6 @@
 ### 安装
 ```
-npm i --save rc-ueditor-wrap
+npm i --save react-ueditor-wrap
 ```
 [demo](http://uso.oschina.io/react-ueditor-demo/)
 ### 使用
