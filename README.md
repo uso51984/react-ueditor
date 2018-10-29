@@ -5,7 +5,7 @@ npm i --save react-ueditor-wrap
 [demo](http://uso.oschina.io/react-ueditor-demo/)
 ### 使用
 ```
-import RcUeditor from 'rc-ueditor-wrap';
+import RcUeditor from 'react-ueditor-wrap';
 
 class Demo extends React.Component {
 
