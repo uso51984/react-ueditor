@@ -53,6 +53,16 @@ export default class RichText extends React.Component {
     }
   }
 
+  componentWillUnmount() {
+    if (!this.editor) return;
+    this.editor.destroy();
+  }
+
+  componentWillReceiveProps({ value }) {
+    if (value !== this.props.value && this.editor) {
+      this.editor.setContent(value);
+    }
+  }
 
   loadUEditorScript() {
     if (window[UEDITOR_LOADED_KEY] !== undefined) {
@@ -108,11 +118,6 @@ export default class RichText extends React.Component {
     editor.ready(() => {
       editor.setContent(value);
     })
-  }
-
-  componentWillUnmount() {
-    if (!this.editor) return;
-    this.editor.destroy();
   }
 
   onChange = () => {
