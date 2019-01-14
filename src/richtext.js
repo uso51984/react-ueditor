@@ -111,9 +111,14 @@ export default class RichText extends React.Component {
     let editor = new UE.ui.Editor(conf);
     this.editor = editor;
 
-    editor.addListener('blur contentChange', () => {
+    editor.addListener('contentChange', () => {
       this.onChange();
     });
+
+    editor.addListener('blur', () => {
+      this.onBlur();
+    });
+
     editor.render(target);
     editor.ready(() => {
       editor.setContent(value);
@@ -123,6 +128,11 @@ export default class RichText extends React.Component {
   onChange = () => {
     const value = this.editor.getContent();
     this.props.onChange && this.props.onChange(value);
+  }
+
+  onBlur = () => {
+    const value = this.editor.getContent();
+    this.props.onBlur && this.props.onBlur(value);
   }
 
   render() {

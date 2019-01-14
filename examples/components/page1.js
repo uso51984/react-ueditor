@@ -8,7 +8,13 @@ export default class Page1 extends React.Component {
   }
 
   onChange = (value) => {
-    this.setState({ data: value })
+    this.ueditorValue = value;
+    console.log('onChange', this.ueditorValue)
+  }
+
+  onBlur = (value) => {
+    this.ueditorValue = value;
+    console.log('onBlur', this.ueditorValue)
   }
 
   render(){
@@ -19,9 +25,8 @@ export default class Page1 extends React.Component {
             e.preventDefault();
             this.setState({ data: value })
           }}
-
         >
-        受控设置value值
+        设置value值
         </button>
 
         <Ueditor onChange={this.onChange} value={this.state.data} />
