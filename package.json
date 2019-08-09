@@ -1,6 +1,6 @@
 {
   "name": "react-ueditor-wrap",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "react ueditor",
   "main": "lib/index.js",
   "repository": {
@@ -14,36 +14,30 @@
     "rc-ueditor",
     "richtext"
   ],
-  "dependencies": {
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
-    "react-router-dom": "^4.1.1"
+  "config": {
+    "name": "react-ueditor",
+    "entry": {
+      "react-ueditor": [
+        "./src/index.js"
+      ]
+    },
+    "server": {
+      "port": 9200
+    }
   },
+  "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.0.0",
-    "babel-eslint": "^7.1.1",
-    "babel-loader": "^6.2.0",
-    "babel-plugin-add-module-exports": "^1.0.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "babel-preset-react-hmre": "^1.1.1",
-    "babel-preset-stage-0": "^6.3.13",
-    "css-loader": "^0.25.0",
-    "file-loader": "^1.1.11",
-    "html-webpack-plugin": "^2.29.0",
-    "less": "^2.7.1",
-    "less-loader": "^2.2.3",
-    "path": "^0.12.7",
-    "style-loader": "^0.13.1",
-    "webpack": "^3.2.0",
-    "webpack-dev-server": "^2.5.1"
+    "bee-build-tools": "0.0.26",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
   },
   "scripts": {
-    "start": "webpack-dev-server --devtool eval --progress --hot --host 0.0.0.0 --port 9292 --config webpack.dev.config.js",
-    "build": "babel src --out-dir lib"
+    "dist": "bee-tools run dist",
+    "dev": "webpack-dev-server --config ./webpack.dev.js",
+    "compile": "bee-tools run compile --babel-runtime",
+    "buildExample": "bee-tools run buildExample",
+    "gh-pages": "bee-tools run gh-pages",
+    "release": "bee-tools run release"
   },
   "author": "edmund_chen"
 }
