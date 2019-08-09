@@ -8,16 +8,23 @@ export default class Page1 extends React.Component {
     nowValue: ''
   }
 
+  componentDidMount() {
+    console.log('e23', this.ref)
+  }
+
   onChange = (value) => {
     this.ueditorValue = value;
-    console.log('onChange', this.ueditorValue)
     this.setState({ nowValue: value });
   }
 
   onBlur = (value) => {
     this.ueditorValue = value;
+    console.log('----')
     this.setState({ nowValue: value });
-    console.log('onBlur', this.ueditorValue)
+  }
+
+  getEditorInstance(instance) {
+    console.log('instance', instance);
   }
 
   render(){
@@ -32,7 +39,7 @@ export default class Page1 extends React.Component {
         设置value值
         </button>
 
-        <Ueditor onChange={this.onChange} onBlur={this.onBlur} value={this.state.initValue} />
+        <Ueditor onChange={this.onChange} onBlur={this.onBlur} value={this.state.initValue} getEditorInstance={this.getEditorInstance} />
         <p>{this.state.nowValue}</p>
       </div>
     )

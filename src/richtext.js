@@ -27,6 +27,7 @@ export default class RichText extends React.Component {
     editorConfig: {}, // ueditor 默认值
     className: '',
     prefix: 'bee',
+    getEditorInstance(){}
   }
 
   constructor(props) {
@@ -123,6 +124,7 @@ export default class RichText extends React.Component {
     editor.ready(() => {
       editor.setContent(value);
     })
+    this.props.getEditorInstance(this.editor);
   }
 
   onChange = () => {
